@@ -1,19 +1,20 @@
-import './Home.css';
-import avater from '../Images/avater.png';
-import { designs, web } from '../items';
-import { useState, useEffect, useRef } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// Home.jsx
+import "./Home.css";
+import avater from "../Images/avater.png";
+import { designs, web } from "../items";
+import { useState, useEffect, useRef } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowAltCircleLeft,
   faArrowAltCircleRight,
   faEnvelope,
   faArrowAltCircleDown,
-} from '@fortawesome/free-regular-svg-icons';
-import { Link } from 'react-router-dom';
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+} from "@fortawesome/free-regular-svg-icons";
+import { Link } from "react-router-dom";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-// Simple in-view hook (embedded)
+// Simple in-view hook
 function useInView(threshold = 0.2) {
   const ref = useRef(null);
   const [inView, setInView] = useState(false);
@@ -42,25 +43,25 @@ function Home() {
 
   const next = () => {
     if (slide2 < web.length - webpages) {
-      setSlide2(slide2 + 1);
+      setSlide2((s) => s + 1);
     }
   };
 
   const prev = () => {
     if (slide2 > 0) {
-      setSlide2(slide2 - 1);
+      setSlide2((s) => s - 1);
     }
   };
 
   const nextSlider = () => {
     if (slide < designs.length - itemsPerPage) {
-      setSlider(slide + 1);
+      setSlider((s) => s + 1);
     }
   };
 
   const prevSlider = () => {
     if (slide > 0) {
-      setSlider(slide - 1);
+      setSlider((s) => s - 1);
     }
   };
 
@@ -72,10 +73,10 @@ function Home() {
   const { ref: contactRef, inView: contactVisible } = useInView(0.2);
 
   return (
-    <div className="home-wrapper">
+    <div className="home-wrapper relative">
       {/* Hero */}
       <div
-        className={`body popup ${heroVisible ? 'visible' : ''}`}
+        className={`body popup ${heroVisible ? "visible" : ""}`}
         ref={heroRef}
       >
         <div className="section">
@@ -94,7 +95,7 @@ function Home() {
 
       {/* About */}
       <div
-        className={`body popup ${aboutVisible ? 'visible' : ''}`}
+        className={`body popup ${aboutVisible ? "visible" : ""}`}
         ref={aboutRef}
       >
         <div className="section">
@@ -118,7 +119,7 @@ function Home() {
 
       {/* Skills / Tools & Technologies */}
       <div
-        className={`body popup ${skillsVisible ? 'visible' : ''}`}
+        className={`body popup ${skillsVisible ? "visible" : ""}`}
         ref={skillsRef}
       >
         <h1 className="section-heading">Tools & Technologies</h1>
@@ -162,7 +163,7 @@ function Home() {
 
       {/* Services */}
       <div
-        className={`body popup ${servicesVisible ? 'visible' : ''}`}
+        className={`body popup ${servicesVisible ? "visible" : ""}`}
         ref={servicesRef}
       >
         <h1 className="section-heading">How I Can Help</h1>
@@ -258,7 +259,7 @@ function Home() {
 
       {/* Contact */}
       <div
-        className={`body popup ${contactVisible ? 'visible' : ''}`}
+        className={`body popup ${contactVisible ? "visible" : ""}`}
         ref={contactRef}
       >
         <div className="contact">
