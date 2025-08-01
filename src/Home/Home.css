@@ -1,0 +1,227 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 1rem 2rem;
+    color: rgba(24, 24, 204, 0.795);
+  }
+  
+  .section {
+    display: flex;
+    width: 90%;
+    gap: 70px;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    justify-content: space-around;
+  }
+  
+  .section1 {
+    display: flex;
+    padding-left: 4rem;
+    flex-direction: column;
+    line-height: 0.9em;
+  }
+  
+  .img {
+    background-color: blue;
+    border-radius: 50%;
+    padding: 5px;
+    flex-shrink: 0;
+  }
+  
+  .image {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+  }
+  
+  .section2 {
+    background-color: rgb(18, 18, 61);
+  }
+  
+  .about {
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    flex-direction: column;
+  }
+  
+  .ite {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    gap: 10px;
+    flex-direction: row;
+  }
+  
+  .controlremote {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    position: absolute;
+    top:93%;
+  }
+  
+  .bgabout {
+    min-width: 50%;
+    line-height: 1.2em;
+    background-color: rgba(80, 80, 138, 0.616);
+    padding: 2px;
+    justify-content: center;
+    border-radius: 5%;
+  }
+  
+  .contact {
+    text-align: center;
+    width: 80%;
+    padding: 2rem 1rem;
+  }
+  
+  .Link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+    border-radius: 2px;
+    text-align: center;
+    width: 100px;
+    list-style: none;
+    padding: 6px 10px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .download-btn {
+    margin-top: 1rem;
+    padding: 1.75rem 1.25rem;
+    background-color: rgba(24, 24, 204, 0.8);
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+ .project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .project-img {
+    width: 150px;
+    min-height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  .popup {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+  
+  .popup.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Responsive: Tablets */
+  @media (max-width: 1024px) {
+    .section {
+      flex-direction: column-reverse;
+      gap: 30px;
+      padding: 1rem;
+    }
+  
+    .bgabout {
+      min-width: 100%;
+      margin-bottom: 1rem;
+    }
+  
+    .about {
+      padding: 30px 20px;
+    }
+  
+    .image {
+      width: 140px;
+      height: 140px;
+    }
+  
+    .section1 {
+      padding-left: 1rem;
+      text-align: center;
+    }
+    .popup {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+      }
+      
+      .popup.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+  }
+  
+
+  /* Responsive: Mobile (Android / small) */
+  @media (max-width: 768px) {
+    .body {
+      width: 95%;
+      padding: 1rem;
+    }
+  
+    .section {
+      flex-direction: column-reverse;
+      gap: 20px;
+    }
+    
+    .project-img {
+      width: 120px;
+      min-height: 120px;
+    }
+  
+    .download-btn {
+      width: 100%;
+    }
+  
+    
+  
+    .Link {
+      width: auto;
+      padding: 8px 14px;
+    }
+  
+    .about h1 {
+      font-size: 1.5rem;
+    }
+  
+    .about h2 {
+      font-size: 1rem;
+    }
+  
+    .about h3,
+    .about h4 {
+      font-size: 0.9rem;
+    }
+    .popup {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+      }
+      
+      .popup.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+  }
+  
